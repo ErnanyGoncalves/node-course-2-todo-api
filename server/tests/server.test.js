@@ -5,9 +5,9 @@ const { app } = require("./../server");
 const { Todo } = require("./../models/todo");
 //const { User } = require("./../models/user");
 
-/* beforeEach((done) => {
-    Todo.deleteMany({}).then(() => done);
-}); */
+beforeEach((done) => {
+    Todo.deleteMany({}).then(() => done());
+});
 
 describe("Post /todos", () => {
     it("should create a new todo", (done) => {
